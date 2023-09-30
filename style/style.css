@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,600&family=Oswald:wght@300;400;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* nav */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 3%;
+  background-color: rgba(60, 107, 97, 0.767);
+  z-index: 999;
+}
+
+.navbar #nav-logo {
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-btn ul {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  list-style: none;
+}
+
+.navbar-btn li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Barlow', sans-serif;
+}
+
+.navbar-btn li a:hover {
+  color: black;
+}
+
+/* icon menu */
+.material-symbols-outlined {
+  display: none;
+  color: #fff;
+}
+
+/* about */
+.about {
+  margin: 80px 0;
+  padding: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about-section h2 {
+  font-size: large;
+  font-weight: 700;
+}
+
+.about-section p {
+  padding-top: 8px;
+}
+
+.about-section span {
+  font-style: italic;
+}
+
+/* skill */
+.skill {
+  margin: 65px;
+}
+.skill-section {
+  margin: 40px 0;
+}
+
+.skill-section h1 {
+  padding-bottom: 60px;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 3rem;
+}
+
+.education {
+  display: flex;
+  gap: 1rem;
+}
+
+.education .line {
+  padding: 0 0.7rem;
+}
+
+.education .line div {
+  width: 2px;
+  height: 87px;
+  background: black;
+  position: absolute;
+}
+
+.education-info p {
+  margin: 0.6rem 0 1.4rem;
+}
+
+.education-years {
+  margin-bottom: 3rem;
+}
+
+.education .line div:before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+}
+
+.skill-list {
+  display: grid;
+}
+
+.skill-right {
+  display: grid;
+  padding-left: 140px;
+}
+
+.skill-right p {
+  font-size: 18px;
+  text-align: justify;
+  padding-bottom: 10px;
+}
+
+.skill-right ul {
+  line-height: 2rem;
+  padding: 0 40px;
+}
+
+/* contact */
+.contact {
+  margin: 50px 65px;
+}
+
+.form div {
+  margin: 22px;
+}
+
+.form input,
+.form textarea {
+  width: 50%;
+  padding: 6px 20px;
+  border: 1px solid #e4e4e4;
+  border-radius: 3px;
+  resize: none;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #9d9fa1;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border: 1px solid rgb(60, 107, 97);
+}
+
+.submit-btn {
+  width: 50%;
+  padding: 12px 20px;
+  background-color: rgba(60, 107, 97, 0.767);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: rgba(59, 59, 59, 0.808);
+}
+
+/* footer */
+footer {
+  padding: 60px;
+  text-align: center;
+  background-color: rgb(60, 107, 97);
+}
+
+.footer-icons {
+  margin-bottom: 12px;
+}
+
+.footer-icons a {
+  margin: 0 8px;
+}
+
+.footer-icons svg {
+  fill: #000;
+}
+
+.footer-icons a:hover svg {
+  fill: #fff;
+}
+
+/* media query */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+
+  .material-symbols-outlined {
+    display: inline-block;
+  }
+
+  .navbar .navbar-btn {
+    position: absolute;
+    top: 100%;
+    right: -80%;
+    background-color: rgba(60, 107, 97, 0.767);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-btn.active {
+    right: 0;
+  }
+
+  .navbar .navbar-btn ul li {
+    display: flex;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-btn ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .navbar .navbar-btn ul li::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-btn ul li::after:hover {
+    transform: scaleX(0.2);
+  }
+}
+
+@media (max-width = 600px) {
+  html {
+    font-size: 55%;
+  }
+}
